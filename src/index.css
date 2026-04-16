@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Noto+Sans+Arabic:wght@300;400;500;600;700;900&display=swap');
+@import "tailwindcss";
+
+
+@theme {
+  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif, "Noto Sans Arabic";
+  --font-serif: "Georgia", serif;
+  --color-netflix-red: #E50914;
+  --color-netflix-dark: #050505;
+  --color-netflix-card: #1a1a1a;
+}
+
+@layer base {
+  body {
+    @apply bg-netflix-dark text-white font-sans antialiased;
+    direction: ltr;
+  }
+
+  .rtl {
+    direction: rtl;
+    font-family: "Noto Sans Arabic", sans-serif;
+  }
+}
+
+/* Custom scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hero-overlay-gradient {
+  background: 
+    linear-gradient(to top, #050505 0%, transparent 40%),
+    linear-gradient(to right, rgba(5,5,5,0.9) 0%, rgba(5,5,5,0.4) 30%, transparent 60%);
+}
+
